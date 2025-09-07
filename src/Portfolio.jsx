@@ -461,16 +461,6 @@ const ContactSection = () => (
           <div className="text-white/80">
             <Phone className="inline w-4 h-4 mr-2" /> {PROFILE.phone}
           </div>
-          <div className="pt-2">
-            <a
-              href="https://www.linkedin.com/in/revanth-mudavath"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl border border-white/15 px-4 py-2 text-white/90 hover:bg-white/10"
-            >
-              <Download className="w-4 h-4" /> View Resume (LinkedIn)
-            </a>
-          </div>
         </div>
       </div>
     </div>
