@@ -239,10 +239,6 @@ const Hero = ({ track, setTrack }) => {
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <div className="flex items-center gap-2 mb-4 text-[#66fcf1]">
-              <Sparkles className="w-4 h-4" />
-              <span className="text-sm tracking-widest uppercase">Modern–Retro Portfolio</span>
-            </div>
             <h1 className="text-3xl md:text-5xl font-extrabold leading-tight text-white">
               Hi, I’m <span className="text-[#66fcf1]">{PROFILE.name}</span> — I turn messy, real‑world problems into <span className="text-[#f7d046]">ship‑ready systems</span>.
             </h1>
@@ -296,9 +292,6 @@ const Hero = ({ track, setTrack }) => {
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <div className={cx("relative rounded-3xl p-6 md:p-8", palette.glass)}>
-              <div className="absolute -top-6 -right-6 rotate-12 text-[#ff6ec7] text-xs tracking-widest bg-white/5 border border-white/10 px-3 py-1 rounded-full">
-                RETRO MODE
-              </div>
               <div className="text-sm text-white/80">Current Focus</div>
               <div className="mt-2 text-2xl font-bold text-white">{TRACKS.find((t) => t.key === track)?.label}</div>
               <div className="mt-4 text-white/70 leading-relaxed">
