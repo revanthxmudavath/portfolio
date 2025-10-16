@@ -51,7 +51,6 @@ const PROFILE = {
 
 const TRACKS = [
   { key: "ai", label: "AI Engineer", icon: Cpu },
-  { key: "data", label: "Data Engineer", icon: Database },
   { key: "se", label: "Software Engineer", icon: Server },
 ];
 
@@ -70,13 +69,25 @@ const EDUCATION = [
 
 const EXPERIENCE = [
   {
-    company: "Zelis",
-    role: "Software Engineer Intern",
-    time: "Jan 2024 – Jun 2024 · Hyderabad",
+    company: "SpeedScore, Oregon State University",
+    role: "Software Engineer",
+    time: "Jan 2025 – Sep 2025 · Corvallis, OR",
     bullets: [
-      "Built Salesforce workflows cutting manual input by 30% and lifting productivity by 15% across 3 departments.",
-      "Shipped 5 interactive dashboards + 12 automated reports; sped up data‑driven decisions by ~40–50%.",
-      "Added automated error checks to improve reporting accuracy across teams.",
+      "Built and deployed a cloud-based CI/CD pipeline using Google Cloud Build and Docker, automating test and deployment workflows across staging/production environments and reducing release cycle time by 55%.",
+      "Implemented 'New Tournament' creation flow in React Native mobile app using react-hook-form and TypeScript, mirroring the web's JSON schema; enabled tournament organizers to set up events end-to-end on mobile, reducing manual errors by 30%.",
+      "Designed and integrated a MongoDB-backed buddy system with REST APIs and Redux Toolkit, enabling live search + request management; scaled to support 500+ active users with sub-second query latency.",
+      "Implemented global error/success/info modals with Redux Toolkit + React Native Modal, cutting runtime crash reports during API failures by 40% and ensuring consistent feedback across 100% of app modules.",
+    ],
+  },
+  {
+    company: "Zelis",
+    role: "Software Engineer",
+    time: "Jun 2023 – Jun 2024 · Hyderabad",
+    bullets: [
+      "Engineered Apex triggers and workflow automation in Salesforce to process 10K+ data records weekly, reducing manual input by 30% and boosting cross-department productivity by 15%.",
+      "Developed 12 automated reports and 5 interactive dashboards with Salesforce Analytics + SOQL queries, cutting executive reporting time by 40% and improving accuracy of financial insights.",
+      "Integrated Salesforce APIs with external data sources to streamline data flow across 3 departments, raising system data sync reliability from 80% to 97%.",
+      "Designed error-handling and validation scripts that reduced reconciliation defects by 25%, ensuring cleaner data pipelines and accelerating decision-making.",
     ],
   },
   {
@@ -92,6 +103,16 @@ const EXPERIENCE = [
 
 const PROJECTS = [
   {
+    title: "RAG-Bot",
+    url: "https://github.com/revanthxmudavath/rag-bot",
+    tags: ["Python", "FastAPI", "MongoDB Atlas", "Discord.py", "Azure OpenAI", "LangChain"],
+    highlight:
+      "Production-grade RAG pipeline integrating GPT-4o with MongoDB Atlas vector search + MiniLM embeddings, cutting embedding latency to <120ms through async batching and connection pooling.",
+    impact:
+      "Enabled an intelligent Discord bot with 5+ commands, RAG query orchestration, and real-time feedback loops, driving 30s SLA compliance across multi-guild servers.",
+    track: ["ai"],
+  },
+  {
     title: "AI Travel Planner",
     url: "https://github.com/Skateslavasker/AI_Travel_Planner",
     tags: ["AI", "Agents", "LangChain", "FastAPI", "Streamlit", "Docker"],
@@ -99,7 +120,7 @@ const PROJECTS = [
       "Multi‑agent LLM system orchestrating Google Maps, Airbnb MCP, Calendar MCP, and AccuWeather to generate realistic itineraries.",
     impact:
       "Reduced hard‑coded logic by 50%+; portable demo via Streamlit + Docker.",
-    track: ["ai", "se"],
+    track: ["ai"],
   },
   {
     title: "Intelligent Pantry Chef",
@@ -108,7 +129,17 @@ const PROJECTS = [
     highlight:
       "Full‑stack recipe generator that turns ingredients or images into zero‑waste meals; modular pipelines for OCR → recipe → nutrition.",
     impact: "CI/CD with GitHub Actions; 70% lower deployment friction.",
-    track: ["ai", "data", "se"],
+    track: ["ai"],
+  },
+  {
+    title: "RaveDigest",
+    url: "https://github.com/revanthxmudavath/RaveDigest",
+    tags: ["Python", "FastAPI", "Redis Streams", "PostgreSQL", "Docker", "Prometheus"],
+    highlight:
+      "Production-grade event-driven microservices platform with 5 services (Collector, Analyzer, Composer, Notion Worker, Scheduler), processing 60+ articles/min with 99.9% uptime and <0.5% error rate.",
+    impact:
+      "Implemented AI-driven content analysis pipeline with OpenAI GPT-4o-mini, enforcing strict SLAs (p95 latency ≤120ms, Analyzer ≤8s p95), and achieving 98%+ deduplication accuracy.",
+    track: ["ai", "se"],
   },
   {
     title: "YouTube Data Analysis",
@@ -117,15 +148,6 @@ const PROJECTS = [
     highlight:
       "Processed 200k+ records across 10 regions; uncovered content trends using an hourly ETL to S3 (raw → cleansed → analytics).",
     impact: "Delivered 5–7 interactive QuickSight dashboards for analytics.",
-    track: ["data"],
-  },
-  {
-    title: "SpeedScore (Mobile)",
-    url: "https://www.speedscore.org",
-    tags: ["React‑Native", "Redux", "TypeScript", "Node.js"],
-    highlight:
-      "Tournament creation flow matching web JSON schema; global modal + error handling; Buddies feature with live updates.",
-    impact: "Reduced manual errors ~30%; fewer runtime failures via centralized feedback.",
     track: ["se"],
   },
   {
@@ -135,30 +157,34 @@ const PROJECTS = [
     highlight:
       "API gateway + services for shortening & redirection; SHA‑256 keys + Redis caching.",
     impact: "Cut DB queries by ~60%; modular deployment with Docker Compose.",
-    track: ["se", "data"],
+    track: ["se"],
   },
 ];
 
 const SKILLS = [
   {
     label: "Languages",
-    items: ["Python", "TypeScript", "Java", "SQL"],
+    items: ["Python", "Java", "TypeScript", "SQL", "C"],
   },
   {
     label: "AI / ML",
-    items: ["LangChain", "Agno", "CrewAI", "OpenAI", "PyTorch", "TensorFlow"],
+    items: ["LangChain", "Agno", "CrewAI", "OpenAI", "PyTorch", "TensorFlow", "HuggingFace", "RAG Pipelines", "Prompt Engineering"],
+  },
+  {
+    label: "Backend & APIs",
+    items: ["FastAPI", "Express.js", "Node.js", "RESTful APIs", "OAuth/JWT", "Redis Streams", "Webhooks"],
   },
   {
     label: "Data & Cloud",
-    items: ["PySpark", "AWS Glue", "Lambda", "S3", "Athena", "QuickSight", "PostgreSQL", "Redis"],
+    items: ["PostgreSQL", "MongoDB", "Redis", "PySpark", "AWS Glue", "AWS Lambda", "S3", "Athena", "QuickSight", "Vector Databases (FAISS, Pinecone)"],
   },
   {
-    label: "Web & Backend",
-    items: ["FastAPI", "Express", "Node.js", "REST", "OAuth/JWT", "React‑Native", "Streamlit"],
+    label: "DevOps & Tools",
+    items: ["Docker", "Kubernetes", "GitHub Actions", "CI/CD", "Prometheus", "Google Cloud Build", "Alembic"],
   },
   {
-    label: "DevOps",
-    items: ["Docker", "GitHub Actions", "CI/CD"],
+    label: "Web & Mobile",
+    items: ["React Native", "Streamlit", "Flask", "HTML/CSS", "Redux Toolkit", "TypeScript"],
   },
 ];
 
@@ -296,7 +322,6 @@ const Hero = ({ track, setTrack }) => {
               <div className="mt-2 text-2xl font-bold text-white">{TRACKS.find((t) => t.key === track)?.label}</div>
               <div className="mt-4 text-white/70 leading-relaxed">
                 {track === "ai" && <p>Multi‑agent systems, context‑aware tools, and RAG pipelines that orchestrate maps, calendars, and weather to act end‑to‑end.</p>}
-                {track === "data" && <p>PySpark + AWS data stacks that stream/transform, model, and visualize at scale — with clean layers and automated checks.</p>}
                 {track === "se" && <p>Strong backends and mobile UX — expressive APIs, resilient caching, and error systems that make apps feel instant.</p>}
               </div>
               <div className="mt-6 grid grid-cols-3 gap-2">
