@@ -57,12 +57,12 @@ const TRACKS = [
 const EDUCATION = [
   {
     school: "Oregon State University",
-    degree: "M.Eng. in Computer Science (GPA: 3.7)",
+    degree: "M.Eng. in Computer Science (GPA: 4.0)",
     time: "Sep 2024 – Dec 2026",
   },
   {
     school: "Vasavi College of Engineering (VCE)",
-    degree: "B.E. in Computer Science (GPA: 3.3) · Best Project of 2024",
+    degree: "B.E. in Computer Science (GPA: 4.0) · Best Project of 2024",
     time: "Sep 2020 – Jun 2024",
   },
 ];
@@ -271,7 +271,7 @@ const Hero = ({ track, setTrack }) => {
             <p className="mt-5 text-white/80 leading-relaxed">
               My story isn’t about chasing buzzwords. It’s about building things that <em>actually help</em> people: agents that plan your week,
               pipelines that unlock insight, backends that never blink. From OSU’s labs to internships in Hyderabad, I’ve obsessed over one idea —
-              <strong>software should give you time back</strong>.
+              <strong> software should give you time back</strong>.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               {TRACKS.map(({ key, label, icon: Icon }) => (
